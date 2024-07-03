@@ -1,14 +1,14 @@
-//Esta aplicación consume una API de Github y nos trae los datos del usaurio que mandemos dentro del username. 
+//Esta aplicación consume una API de Github y nos trae los datos del usuario que mandemos dentro del username. 
 //Una vez que se obtiene la información del API se muestra la información en el DOM.
 
 const baseEndpoint = 'https://api.github.com';
 const usersEndpoint = `${baseEndpoint}/users`;
 
 /*Los nombres de las variables deben ser significativos y dar contexto de la información almacenada.
-Esto mejorará la legibikidad y mantenibilidad del código.
+Esto mejorará la legibilidad y mantenibilidad del código.
 //Es buena práctica colocar un $ delante de las variables y constantes que hacen referencia a elementos HTML,
 para diferenciarlos del resto.
-//Cuando se utiliza el querySelector se debe hacer referncia a una clase, usando un punto delkante del nombre de la clase.
+//Cuando se utiliza el querySelector se debe hacer referencia a una clase, usando un punto delante del nombre de la clase.
 */
 
 const $name = document.querySelector('.name');
@@ -28,7 +28,7 @@ try{
 //Esto nos devolverá una promesa, por lo cual debemos colocar un await para esperar el callback con la respuesta. 
       const data = await response.json();
 //Se cambian los nombres de variables a los nuevos, que son más descriptivos.
-//Lo que queremos imprimir son variables,por ello, debemos elimianr las comillas
+//Lo que queremos imprimir son variables,por ello, debemos eliminar las comillas.
       $name.textContent = data.name;
       $blog.textContent = data.blog;
       $location.textContent = data.location;
